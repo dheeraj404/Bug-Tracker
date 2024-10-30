@@ -1,0 +1,92 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+}
+
+/* Centered login box styling */
+.login-box {
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.028);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-align: center;
+    border: 2px solid rgba(51, 51, 51, 0.302);
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%; /* Ensure input fields fill the form width */
+    max-width: 400px; /* Set a max-width for consistent field length */
+    margin: 0 auto; /* Center the form within the login box */
+}
+
+.input-field {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    transition: background 0.3s ease;
+    width: 100%; /* Ensure inputs are the same width */
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.input-field:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Button styling */
+.login-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background:  #dc3545;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 50%; /* Center button and control width */
+    margin: 0 auto;
+}
+
+.login-button:hover {
+    transform: scale(1.05);
+    background: #c82333;
+}
+
+/* Password field styling with toggle */
+.password-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 106%;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+}
+
+.password-toggle:hover {
+    color: #333;
+}
