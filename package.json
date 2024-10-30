@@ -21,7 +21,8 @@
     "react-toastify": "^10.0.6",
     "recharts": "^2.13.0",
     "toast": "^0.5.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@babel/plugin-proposal-private-property-in-object":"7.21.11"
   },
   "scripts": {
     "start": "react-scripts start",
