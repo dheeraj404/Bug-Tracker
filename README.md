@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Task/Bug Tracker Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application for tracking tasks and bugs, designed with a user-friendly interface and responsive design. The application provides functionalities for both **Admins** and **Users**. Admins can create, assign, and manage tasks, while users can view and update their assigned tasks, track subtasks, and view completion progress.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Assumptions Made](#assumptions-made)
+- [Project Highlights](#project-highlights)
+- [License](#license)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**: Simple mock login system with role-based access (Admin/User).
+- **Dashboard**:
+  - Admins can view, create, edit, delete, and assign tasks to users.
+  - Users can view their assigned tasks.
+- **Task Management**:
+  - Admins can create tasks with fields like title, description, priority, status, due date, etc.
+  - Each task can contain multiple subtasks.
+  - Users can mark subtasks as completed.
+- **Task Completion Verification**:
+  - After a user completes all subtasks for a task, they can mark the task as "Ready for Review."
+  - Admins will review completed tasks. If the task is verified as complete, the admin can mark the task status as "Completed."
+  - Once marked as "Completed," the task will appear as completed for both the admin and the user.
+- **Progress Tracking**:
+  - Real-time progress bar that updates as subtasks are completed.
+  - A time tracker that shows how much time is spent on each task.
+- **Responsive UI**: Works seamlessly across devices with a clean and intuitive design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: Next.js (React.js)
+- **State Management**: Context API
+- **Styling**: CSS with Glassmorphism effects for modern UI design
+- **Storage**: Local storage for task persistence across sessions
+- **Mock Data**: JSON files to simulate database data for users and tasks
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Node.js**: Make sure Node.js is installed. You can download it from [nodejs.org](https://nodejs.org/).
+- **npm**: Installed with Node.js. You can also use `yarn` as an alternative package manager.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the Repository**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/dheeraj404/Bug-Tracker.git
+   cd task-bug-tracker
+2.Install Dependencies:
+`npm install`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.Create Mock Data Files:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ensure the following files exist in the public directory for mock data:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+public/users.json: Contains user data with roles (admin, user).
+public/tasks.json: Contains initial task data.
+4.Start the Development Server:
+`npm run dev`
 
-## Learn More
+##usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+###Login:
+Use admin credentials for admin functionalities.
+Use user credentials to see the user dashboard.
+Mock data for login credentials is stored in users.json.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+###Dashboard:
+Admins can view and manage all tasks, create new tasks, and assign them to users.
+Users can only view their assigned tasks and mark subtasks as completed.
 
-### Code Splitting
+###Task Management:
+Admins can create tasks with additional details like priority and due dates.
+Users can view and update subtasks, and track their completion progress.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+###Task Completion Workflow:
+After completing all subtasks for a task, users mark the task as "Ready for Review."
+Admins review these tasks. If verified, they update the task status to "Completed."
+Once marked "Completed," tasks are visible as completed for both the admin and the user.
 
-### Analyzing the Bundle Size
+##Assumptions Made
+Authentication: This project uses mock authentication with hardcoded credentials in users.json. There is no real authentication system; it’s only for demonstration.
+Local Storage Persistence: Tasks are stored in local storage to maintain data across page reloads. This is a temporary data storage approach.
+Date Format: All dates are stored and displayed in YYYY-MM-DD format for simplicity.
+Static Data Source: users.json and tasks.json simulate backend data, with tasks initially loaded from tasks.json if no tasks exist in local storage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##Project Highlights
+Context API for State Management: The app uses Context API for managing authentication and tasks, avoiding the need for external state management libraries.
+Responsive Design: The interface is responsive and provides an intuitive experience on both mobile and desktop.
+Glassmorphism UI: The project features a modern glassmorphism effect for UI elements, adding a visually appealing design layer.
+Date Handling: Dates are consistently handled in the TasksContext to ensure compatibility between components. All dates are converted to ISO strings before storage.
+Task Progress Tracking: Each task has a progress bar that updates as users complete subtasks, giving a clear visual representation of task completion.
+Admin Task Verification: A task completion verification feature allows admins to confirm task completion, adding an extra layer of accountability for task status updates.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Known Limitations
+No Real Authentication: This project does not implement real authentication or authorization, as it is based on mock data.
+Local Storage as Database: Tasks are stored in local storage, meaning they are specific to each user's browser and do not sync across users or sessions.
+Limited Error Handling: Error handling is minimal and mainly logs errors to the console.
