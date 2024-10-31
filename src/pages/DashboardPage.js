@@ -1,4 +1,4 @@
-// DashboardPage.jsx
+
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 import { TasksContext } from '../contexts/TasksContext';
@@ -126,7 +126,7 @@ const DashboardPage = () => {
       ) : (
         <>
           <h3>Open Tasks</h3>
-          <TaskList tasks={sortedAndFilteredTasks.filter((task) => task.status !== 'Closed')} />
+          <TaskList className="c1" tasks={sortedAndFilteredTasks.filter((task) => task.status !== 'Closed')} />
 
           <h3>Completed Tasks</h3>
           <TaskList tasks={sortedAndFilteredTasks.filter((task) => task.status === 'Closed')} />

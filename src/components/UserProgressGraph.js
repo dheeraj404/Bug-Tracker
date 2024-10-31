@@ -1,4 +1,4 @@
-// src/components/UserProgressGraph.js
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';

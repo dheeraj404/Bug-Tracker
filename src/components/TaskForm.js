@@ -1,11 +1,11 @@
-// src/components/TaskForm.js
+
 import React, { useState, useContext, useEffect } from 'react';
 import { TasksContext } from '../contexts/TasksContext';
 import { AuthContext } from '../contexts/AuthContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
-import './TaskForm.css'; // Ensure this CSS file exists or adjust styles accordingly
+import './TaskForm.css'; 
 import { FaPlus, FaTimes } from 'react-icons/fa';
 
 const TaskForm = () => {

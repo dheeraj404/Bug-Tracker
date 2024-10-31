@@ -33,7 +33,71 @@
       "dueDate": "2024-11-20",
       "completedAt": null
     },
-    "subtasks": [],
+    "subtasks": [
+      { "id": 1, "title": "Create Database Schema", "isCompleted": false }
+    ],
     "completionPercentage": 0
+  },
+  {
+    "id": 3,
+    "title": "Create API Endpoints",
+    "description": "Develop API endpoints for user authentication and data retrieval.",
+    "priority": "High",
+    "status": "In Progress",
+    "assignee": 2,
+    "createdBy": 1,
+    "timeSpent": 2,
+    "importantDates": {
+      "createdAt": "2024-10-10",
+      "dueDate": "2024-11-05",
+      "completedAt": null
+    },
+    "subtasks": [
+      { "id": 1, "title": "User Authentication API", "isCompleted": true },
+      { "id": 2, "title": "Data Retrieval API", "isCompleted": false }
+    ],
+    "completionPercentage": 50
+  },
+  {
+    "id": 4,
+    "title": "Frontend Integration",
+    "description": "Integrate the frontend with the backend API endpoints.",
+    "priority": "High",
+    "status": "Not Started",
+    "assignee": 3,
+    "createdBy": 1,
+    "timeSpent": 0,
+    "importantDates": {
+      "createdAt": "2024-10-15",
+      "dueDate": "2024-11-10",
+      "completedAt": null
+    },
+    "subtasks": [
+      { "id": 1, "title": "Setup API Client", "isCompleted": false },
+      { "id": 2, "title": "Implement Authentication", "isCompleted": false },
+      { "id": 3, "title": "Test Data Fetching", "isCompleted": false }
+    ],
+    "completionPercentage": 0
+  },
+  {
+    "id": 5,
+    "title": "Bug Report: Broken Link on Landing Page",
+    "description": "The 'Learn More' button on the landing page is not redirecting to the correct section.",
+    "priority": "Low",
+    "status": "Open",
+    "assignee": 2,
+    "createdBy": 1,
+    "timeSpent": 0.5,
+    "importantDates": {
+      "createdAt": "2024-10-18",
+      "dueDate": "2024-10-25",
+      "completedAt": null
+    },
+    "subtasks": [
+      { "id": 1, "title": "Identify broken link", "isCompleted": true },
+      { "id": 2, "title": "Update link URL", "isCompleted": false },
+      { "id": 3, "title": "Test redirection", "isCompleted": false }
+    ],
+    "completionPercentage": 33
   }
 ]

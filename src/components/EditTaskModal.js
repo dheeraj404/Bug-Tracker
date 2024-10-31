@@ -1,4 +1,4 @@
-// src/components/EditTaskModal.js
+
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { TasksContext } from '../contexts/TasksContext';
@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import { convertToSeconds } from '../utils/formatTime';
 import { FaTimes, FaPlus, FaCheckCircle, FaRegCircle } from 'react-icons/fa';
-import './EditTaskModal.css'; // Import CSS for styling
+import './EditTaskModal.css'; 
 
 const EditTaskModal = ({ task, onClose }) => {
   const { updateTask } = useContext(TasksContext);
@@ -18,7 +18,7 @@ const EditTaskModal = ({ task, onClose }) => {
   const [users, setUsers] = useState([]);
   const [taskData, setTaskData] = useState({ 
     ...task, 
-    timeSpent: formatTime(task.timeSpent) // Initialize as mm:ss
+    timeSpent: formatTime(task.timeSpent) 
   });
 
   // Helper function to format time from seconds to mm:ss

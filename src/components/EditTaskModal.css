@@ -1,6 +1,3 @@
-/* src/components/EditTaskModal.css */
-
-/* CSS Variables for Consistent Theming */
 :root {
     --modal-overlay-bg: rgba(0, 0, 0, 0.5);
     --modal-bg: rgba(255, 255, 255, 0.1);
@@ -23,8 +20,6 @@
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --transition-speed: 0.3s;
   }
-  
-  /* Overlay */
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -58,7 +53,7 @@
     animation: slideIn var(--transition-speed) ease-in-out;
   }
   
-  /* Close Button */
+ 
   .close-button {
     position: absolute;
     top: 1rem;
@@ -75,7 +70,7 @@
     color: #ff4d4d;
   }
   
-  /* Modal Title */
+  
   .modal-title {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -83,27 +78,27 @@
     color: #4a90e2;
   }
   
-  /* Form */
+
   .edit-task-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
   
-  /* Form Groups */
+
   .form-group {
     display: flex;
     flex-direction: column;
   }
   
-  /* Labels */
+
   .form-label {
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: var(--subtext-color);
   }
   
-  /* Inputs, Textarea, Selects */
+ 
   .form-input,
   .form-textarea,
   .form-select,
@@ -132,7 +127,7 @@
     box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
   }
   
-  /* Subtasks Container */
+
   .subtasks-container {
     padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -147,7 +142,7 @@
     font-size: 1.2rem;
   }
   
-  /* Subtask Item */
+  
   .subtask-item {
     display: flex;
     align-items: center;
@@ -183,8 +178,7 @@
     text-decoration: line-through;
     color: var(--subtext-color);
   }
-  
-  /* Remove Subtask Button */
+
   .remove-subtask-button {
     background-color: var(--remove-button-bg);
     border: none;
@@ -204,7 +198,7 @@
     transform: scale(1.1);
   }
   
-  /* Add Subtask Button */
+
   .add-subtask-button {
     display: flex;
     align-items: center;
@@ -228,7 +222,7 @@
     vertical-align: middle;
   }
   
-  /* Button Group */
+
   .button-group {
     display: flex;
     gap: 1rem;
@@ -269,7 +263,7 @@
     transform: translateY(-2px);
   }
   
-  /* Animations */
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -288,9 +282,7 @@
     }
   }
   
-  /* Custom Scrollbar Styling (Optional) */
   
-  /* Webkit-based browsers */
   .modal-content::-webkit-scrollbar {
     width: 8px;
   }
@@ -308,13 +300,13 @@
     background: #555; 
   }
   
-  /* Firefox */
+
   .modal-content {
     scrollbar-width: thin;
     scrollbar-color: #4e4e4eec #f1f1f117;
   }
   
-  /* Responsive Design */
+
   @media (max-width: 600px) {
     .modal-content {
       padding: 1.5rem;

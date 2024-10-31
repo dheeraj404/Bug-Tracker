@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import './LoginPage.css'; // Import the CSS file
-import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import icons for show/hide
-
+import './LoginPage.css'; 
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; 
 const LoginPage = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -39,7 +38,7 @@ const LoginPage = () => {
   return (
     <div className="page-container">
       <div className="login-box">
-        <h2>Task Tracker Login</h2>
+        <h2>Bug Tracker Login</h2>
         <form onSubmit={handleSubmit} className="login-form">
           <label htmlFor="username">
             <input

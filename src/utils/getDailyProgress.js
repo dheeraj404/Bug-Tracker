@@ -1,4 +1,4 @@
-// src/utils/getDailyProgress.js
+
 import { parseISO, eachDayOfInterval, format, isBefore, isAfter, isEqual } from 'date-fns';
 
 const getDailyProgress = (tasks, startDate, endDate) => {

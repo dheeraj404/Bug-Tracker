@@ -1,4 +1,4 @@
-// src/components/TaskList.js
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import TaskItem from './TaskItem';
