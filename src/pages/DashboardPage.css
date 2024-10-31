@@ -24,17 +24,11 @@
   }
   
   .adminSection {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+   
   }
   
-  .createButton {
-    padding: 0.5rem 1rem;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+  
   
   .sortContainer {
     display: flex;
@@ -50,4 +44,146 @@
   .graphContainer {
     margin-top: 3rem;
   }
+  /* DashboardPage.css */
+
+.container {
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.logoutButton {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.createButton {
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.sortContainer {
+  display: flex;
+  gap: 1rem;
+  /* margin-bottom: 1rem; */
+  margin-top: 1rem;
+}
+
+.dropdownContainer {
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.dropdownButton {
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.glassDropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.9rem;
   
+}
+
+.pro_h {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.graphContainer {
+  /* Your existing styles */
+}
+
+/* Media Queries */
+@media (max-width: 549px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .logoutButton,
+  .createButton,
+  .dropdownButton {
+    font-size: 0.8rem;
+  }
+
+  .dropdownItem {
+    font-size: 0.75rem;
+  }
+  .dropdownContainer{
+    margin: 0px;
+  }
+
+  .pro_h {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+  /* Styles for medium screens if needed */
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .sortContainer {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

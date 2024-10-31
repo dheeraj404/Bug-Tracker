@@ -1,5 +1,5 @@
 // src/components/TaskForm.js
-import React, { useState, useContext, useEffect, useRef } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { TasksContext } from '../contexts/TasksContext';
 import { AuthContext } from '../contexts/AuthContext';
 import axios from 'axios';
@@ -87,12 +87,11 @@ const TaskForm = () => {
       return;
     }
 
-    // Ensure all subtask titles are filled
-    for (let subtask of taskData.subtasks) {
-      if (!subtask.title.trim()) {
-        toast.error('Please fill all subtask titles.');
-        return;
-      }
+    // Ensure all subtask titles are filled and at least one subtask exists
+    const hasValidSubtasks = taskData.subtasks.some((subtask) => subtask.title.trim());
+    if (!hasValidSubtasks) {
+      toast.error('Please add at least one subtask with a title.');
+      return;
     }
 
     const completedSubtasks = taskData.subtasks.filter(
@@ -129,6 +128,9 @@ const TaskForm = () => {
       completionPercentage: 0,
     });
   };
+
+  // Get today's date in the format YYYY-MM-DD for setting as the min value for due date
+  const today = new Date().toISOString().split('T')[0];
 
   return (
     <div className="task-form-container">
@@ -207,6 +209,7 @@ const TaskForm = () => {
             value={taskData.importantDates.dueDate}
             onChange={handleChange}
             className="form-input"
+            min={today}
           />
         </label>
 

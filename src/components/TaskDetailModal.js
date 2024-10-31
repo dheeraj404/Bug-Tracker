@@ -46,7 +46,10 @@ const TaskDetailModal = ({ task, onClose }) => {
     };
 
     updateTask(updatedTask);
-    toast.success('Subtask status updated!');
+    toast.success('Subtask status updated!', {
+      className: 'custom-toast-success',
+    });
+    
   };
 
   const calcTimeSpent = (date1) => {

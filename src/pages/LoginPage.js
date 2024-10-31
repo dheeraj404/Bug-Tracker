@@ -51,6 +51,7 @@ const LoginPage = () => {
               required
               className="input-field"
               placeholder="Enter your username"
+              aria-label="Username"
             />
           </label>
           <label htmlFor="password" className="password-label">
@@ -63,6 +64,7 @@ const LoginPage = () => {
               required
               className="input-field"
               placeholder="Enter your password"
+              aria-label="Password"
             />
             <span className="password-toggle" onClick={toggleShowPassword}>
               {showPassword ? <FaEyeSlash /> : <FaEye />}

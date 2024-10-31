@@ -1,69 +1,85 @@
+/* Global Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Page Container Styling */
 .page-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 2rem;
+    background: #000000; /* Optional: Adds a dark background for better contrast */
 }
 
-/* Centered login box styling */
+/* Centered Login Box Styling */
 .login-box {
     width: 100%;
     max-width: 500px;
-    max-height: 500px;
     padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.028);
+    background: rgba(0, 0, 0, 0.028);
     border-radius: 16px;
     backdrop-filter: blur(10px);
     color: #ffffff;
     text-align: center;
-    border: 2px solid rgba(51, 51, 51, 0.302);
+    border: 2px solid rgba(51, 51, 51, 0.392);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow for depth */
 }
 
+/* Login Box Header */
 .login-box h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #ffffff;
 }
 
+/* Login Form Styling */
 .login-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 100%; /* Ensure input fields fill the form width */
-    max-width: 400px; /* Set a max-width for consistent field length */
-    margin: 0 auto; /* Center the form within the login box */
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
+/* Input Field Styling */
 .input-field {
     padding: 0.75rem;
     font-size: 1rem;
     border-radius: 8px;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0); /* Consistent border */
     outline: none;
     background: rgba(255, 255, 255, 0.15);
     color: #ffffff;
     transition: background 0.3s ease;
-    width: 100%; /* Ensure inputs are the same width */
-    border: 1px solid rgba(0, 0, 0, 0);
+    width: 100%; /* Ensures inputs fill the container's width */
+}
+
+.input-field::placeholder {
+    color: #dddddd; /* Lighter placeholder text for better readability */
 }
 
 .input-field:focus {
     background: rgba(255, 255, 255, 0.25);
 }
 
-/* Button styling */
+/* Login Button Styling */
 .login-button {
     padding: 0.75rem;
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
-    background:  #dc3545;
+    background: #dc3545;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.2s ease;
-    width: 50%; /* Center button and control width */
+    transition: transform 0.2s ease, background 0.2s ease;
+    width: 100%; /* Changed from 50% to 100% for better responsiveness */
+    max-width: 200px; /* Optional: Limits the button width on larger screens */
     margin: 0 auto;
 }
 
@@ -72,12 +88,12 @@
     background: #c82333;
 }
 
-/* Password field styling with toggle */
+/* Password Field Styling with Toggle */
 .password-label {
     position: relative;
     display: flex;
     align-items: center;
-    width: 106%;
+    width: 100%; /* Ensures alignment with other input fields */
 }
 
 .password-toggle {
@@ -85,8 +101,44 @@
     right: 10px;
     cursor: pointer;
     color: #888;
+    font-size: 1rem; /* Ensures the icon is appropriately sized */
 }
 
 .password-toggle:hover {
     color: #333;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff4d4d;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: left; /* Aligns error message to the left for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-box {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .login-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-field {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .login-button {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+        max-width: 100%; /* Allows the button to take full width on small screens */
+    }
+
+    .password-toggle {
+        font-size: 0.9rem;
+    }
 }

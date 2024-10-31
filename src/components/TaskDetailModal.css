@@ -39,7 +39,7 @@
     width: 90%;
     max-width: var(--modal-max-width);
     box-shadow: 0 8px 32px var(--shadow-color);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: var(--text-color);
@@ -71,7 +71,7 @@
   .modal-title {
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: rgb(234, 234, 234);
     text-align: center;
   }
   
@@ -182,6 +182,23 @@
     text-decoration: line-through;
     color: var(--subtext-color);
   }
+  .custom-toast-success {
+    background: rgba(108, 108, 108, 0.066); /* Light green, semi-transparent background */
+    backdrop-filter: blur(8px); /* Blur effect for glassmorphism */
+   
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for the glass effect */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  .Toastify__toast-theme--light{
+    background: rgba(108, 108, 108, 0.066); /* Light green, semi-transparent background */
+    backdrop-filter: blur(8px); /* Blur effect for glassmorphism */
+   
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for the glass effect */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
   
   /* Animations */
   @keyframes fadeIn {
