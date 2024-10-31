@@ -1,4 +1,3 @@
-
 # Task/Bug Tracker Web Application
 
 This project is a web application for tracking tasks and bugs, designed with a user-friendly interface and responsive design. The application provides functionalities for both **Admins** and **Users**. Admins can create, assign, and manage tasks, while users can view and update their assigned tasks, track subtasks, and view completion progress.
@@ -9,6 +8,7 @@ This project is a web application for tracking tasks and bugs, designed with a u
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Credentials](#credentials)
 - [Assumptions Made](#assumptions-made)
 - [Project Highlights](#project-highlights)
 - [License](#license)
@@ -102,6 +102,18 @@ To be filled in with relevant directory structure and description of key files.
 1. After completing all subtasks for a task, users mark the task as "Ready for Review."
 2. Admins review these tasks. If verified, they update the task status to "Completed."
 3. Once marked "Completed," tasks are visible as completed for both the admin and the user.
+
+## Credentials
+
+For testing purposes, use the following credentials:
+
+- **Admin**:
+  - Username: `admin`
+  - Password: `admin123`
+
+- **User**:
+  - Username: `user1`
+  - Password: `user123`
 
 ## Assumptions Made
 
