@@ -68,7 +68,7 @@ public/tasks.json: Contains initial task data.
 4.Start the Development Server:
 `npm run dev`
 
-Usage
+##Usage
 
 ###Login:
 Use admin credentials for admin functionalities.
@@ -88,13 +88,13 @@ After completing all subtasks for a task, users mark the task as "Ready for Revi
 Admins review these tasks. If verified, they update the task status to "Completed."
 Once marked "Completed," tasks are visible as completed for both the admin and the user.
 
-###Assumptions Made
+##Assumptions Made
 Authentication: This project uses mock authentication with hardcoded credentials in users.json. There is no real authentication system; it’s only for demonstration.
 Local Storage Persistence: Tasks are stored in local storage to maintain data across page reloads. This is a temporary data storage approach.
 Date Format: All dates are stored and displayed in YYYY-MM-DD format for simplicity.
 Static Data Source: users.json and tasks.json simulate backend data, with tasks initially loaded from tasks.json if no tasks exist in local storage.
 
-###Project Highlights
+##Project Highlights
 Context API for State Management: The app uses Context API for managing authentication and tasks, avoiding the need for external state management libraries.
 Responsive Design: The interface is responsive and provides an intuitive experience on both mobile and desktop.
 Glassmorphism UI: The project features a modern glassmorphism effect for UI elements, adding a visually appealing design layer.
@@ -102,7 +102,7 @@ Date Handling: Dates are consistently handled in the TasksContext to ensure comp
 Task Progress Tracking: Each task has a progress bar that updates as users complete subtasks, giving a clear visual representation of task completion.
 Admin Task Verification: A task completion verification feature allows admins to confirm task completion, adding an extra layer of accountability for task status updates.
 
-###Known Limitations
+##Known Limitations
 No Real Authentication: This project does not implement real authentication or authorization, as it is based on mock data.
 Local Storage as Database: Tasks are stored in local storage, meaning they are specific to each user's browser and do not sync across users or sessions.
 Limited Error Handling: Error handling is minimal and mainly logs errors to the console.
