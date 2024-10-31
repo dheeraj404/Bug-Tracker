@@ -1,3 +1,4 @@
+
 # Task/Bug Tracker Web Application
 
 This project is a web application for tracking tasks and bugs, designed with a user-friendly interface and responsive design. The application provides functionalities for both **Admins** and **Users**. Admins can create, assign, and manage tasks, while users can view and update their assigned tasks, track subtasks, and view completion progress.
@@ -41,6 +42,7 @@ This project is a web application for tracking tasks and bugs, designed with a u
 
 ## Project Structure
 
+To be filled in with relevant directory structure and description of key files.
 
 ## Getting Started
 
@@ -56,53 +58,73 @@ This project is a web application for tracking tasks and bugs, designed with a u
    ```bash
    git clone https://github.com/dheeraj404/Bug-Tracker.git
    cd task-bug-tracker
-2.Install Dependencies:
-`npm install`
+   ```
 
-3.Create Mock Data Files:
+2. **Install Dependencies**:
 
-Ensure the following files exist in the public directory for mock data:
+   ```bash
+   npm install
+   ```
 
-public/users.json: Contains user data with roles (admin, user).
-public/tasks.json: Contains initial task data.
-4.Start the Development Server:
-`npm run dev`
+3. **Create Mock Data Files**:
 
-##usage
+   Ensure the following files exist in the public directory for mock data:
 
-###Login:
-Use admin credentials for admin functionalities.
-Use user credentials to see the user dashboard.
-Mock data for login credentials is stored in users.json.
+   - `public/users.json`: Contains user data with roles (admin, user).
+   - `public/tasks.json`: Contains initial task data.
 
-###Dashboard:
-Admins can view and manage all tasks, create new tasks, and assign them to users.
-Users can only view their assigned tasks and mark subtasks as completed.
+4. **Start the Development Server**:
 
-###Task Management:
-Admins can create tasks with additional details like priority and due dates.
-Users can view and update subtasks, and track their completion progress.
+   ```bash
+   npm run dev
+   ```
 
-###Task Completion Workflow:
-After completing all subtasks for a task, users mark the task as "Ready for Review."
-Admins review these tasks. If verified, they update the task status to "Completed."
-Once marked "Completed," tasks are visible as completed for both the admin and the user.
+## Usage
 
-##Assumptions Made
-Authentication: This project uses mock authentication with hardcoded credentials in users.json. There is no real authentication system; it’s only for demonstration.
-Local Storage Persistence: Tasks are stored in local storage to maintain data across page reloads. This is a temporary data storage approach.
-Date Format: All dates are stored and displayed in YYYY-MM-DD format for simplicity.
-Static Data Source: users.json and tasks.json simulate backend data, with tasks initially loaded from tasks.json if no tasks exist in local storage.
+### Login
 
-##Project Highlights
-Context API for State Management: The app uses Context API for managing authentication and tasks, avoiding the need for external state management libraries.
-Responsive Design: The interface is responsive and provides an intuitive experience on both mobile and desktop.
-Glassmorphism UI: The project features a modern glassmorphism effect for UI elements, adding a visually appealing design layer.
-Date Handling: Dates are consistently handled in the TasksContext to ensure compatibility between components. All dates are converted to ISO strings before storage.
-Task Progress Tracking: Each task has a progress bar that updates as users complete subtasks, giving a clear visual representation of task completion.
-Admin Task Verification: A task completion verification feature allows admins to confirm task completion, adding an extra layer of accountability for task status updates.
+- Use admin credentials for admin functionalities.
+- Use user credentials to see the user dashboard.
+- Mock data for login credentials is stored in `users.json`.
 
-##Known Limitations
-No Real Authentication: This project does not implement real authentication or authorization, as it is based on mock data.
-Local Storage as Database: Tasks are stored in local storage, meaning they are specific to each user's browser and do not sync across users or sessions.
-Limited Error Handling: Error handling is minimal and mainly logs errors to the console.
+### Dashboard
+
+- **Admins** can view and manage all tasks, create new tasks, and assign them to users.
+- **Users** can only view their assigned tasks and mark subtasks as completed.
+
+### Task Management
+
+- Admins can create tasks with additional details like priority and due dates.
+- Users can view and update subtasks and track their completion progress.
+
+### Task Completion Workflow
+
+1. After completing all subtasks for a task, users mark the task as "Ready for Review."
+2. Admins review these tasks. If verified, they update the task status to "Completed."
+3. Once marked "Completed," tasks are visible as completed for both the admin and the user.
+
+## Assumptions Made
+
+- **Authentication**: This project uses mock authentication with hardcoded credentials in `users.json`. There is no real authentication system; it’s only for demonstration.
+- **Local Storage Persistence**: Tasks are stored in local storage to maintain data across page reloads. This is a temporary data storage approach.
+- **Date Format**: All dates are stored and displayed in `YYYY-MM-DD` format for simplicity.
+- **Static Data Source**: `users.json` and `tasks.json` simulate backend data, with tasks initially loaded from `tasks.json` if no tasks exist in local storage.
+
+## Project Highlights
+
+- **Context API for State Management**: The app uses Context API for managing authentication and tasks, avoiding the need for external state management libraries.
+- **Responsive Design**: The interface is responsive and provides an intuitive experience on both mobile and desktop.
+- **Glassmorphism UI**: The project features a modern glassmorphism effect for UI elements, adding a visually appealing design layer.
+- **Date Handling**: Dates are consistently handled in the `TasksContext` to ensure compatibility between components. All dates are converted to ISO strings before storage.
+- **Task Progress Tracking**: Each task has a progress bar that updates as users complete subtasks, giving a clear visual representation of task completion.
+- **Admin Task Verification**: A task completion verification feature allows admins to confirm task completion, adding an extra layer of accountability for task status updates.
+
+## Known Limitations
+
+- **No Real Authentication**: This project does not implement real authentication or authorization, as it is based on mock data.
+- **Local Storage as Database**: Tasks are stored in local storage, meaning they are specific to each user's browser and do not sync across users or sessions.
+- **Limited Error Handling**: Error handling is minimal and mainly logs errors to the console.
+
+## License
+
+This project is licensed under the MIT License.
