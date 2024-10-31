@@ -68,7 +68,7 @@ public/tasks.json: Contains initial task data.
 4.Start the Development Server:
 `npm run dev`
 
-##Usage
+##usage
 
 ###Login:
 Use admin credentials for admin functionalities.
