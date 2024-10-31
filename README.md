@@ -54,7 +54,7 @@ This project is a web application for tracking tasks and bugs, designed with a u
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/task-bug-tracker.git
+   git clone https://github.com/dheeraj404/Bug-Tracker.git
    cd task-bug-tracker
 2.Install Dependencies:
 `npm install`
